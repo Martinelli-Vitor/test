@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Menu from './components/Menu';
+import RestaurantName from './components/RestaurantName';
+import Rating from './components/Rating';
 
 function App() {
+  const name = 'Restaurante do Zé'
+  const url = 'C:/Users/vitor/Downloads/restze.jpg'
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={url} alt="logo"/>
+      <h1>Bem vindo ao <RestaurantName name={name} /></h1>
+      <Menu
+        promocoes ='Promoções'
+        pratos = 'Pratos'
+        porcoes = 'Porções'
+        bebidas = 'Bebidas'
+      />
+      <h1><Rating/></h1>
+      <p>By Forktrackers</p>
     </div>
   );
 }
